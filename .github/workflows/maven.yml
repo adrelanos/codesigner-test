@@ -63,8 +63,8 @@ jobs:
           output_path: ${GITHUB_WORKSPACE}/artifacts
           # Scan code before sign
           malware_block: false
-          # Environment Name, For Production 'PROD' or For Staging 'DEV'
-          environment_name: DEV
+          # Environment Name, For Production 'PROD' or For Staging 'TEST'
+          environment_name: TEST
 
         # 6) This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete
       - name: Upload Signed Files
