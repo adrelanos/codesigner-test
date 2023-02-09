@@ -41,7 +41,7 @@ jobs:
         shell: bash
         run: |
           mvn clean install -f pom.xml
-          cp target/${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}.jar ${GITHUB_WORKSPACE}/packages/${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}.jar
+          cp target/${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}.jar ${GITHUB_WORKSPACE}/packages/${{env.PROJECT_NAME}}.jar
 
       # 5) This is the step where the created JAR (artifact) files will be signed with CodeSignTool.
       - name: Sign Artifact with CodeSignTool
