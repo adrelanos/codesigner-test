@@ -45,7 +45,7 @@ jobs:
 
       # 5) This is the step where the created JAR (artifact) files will be signed with CodeSignTool.
       - name: Sign Artifact with CodeSignTool
-        uses: sslcom/actions-codesigner@develop
+        uses: sslcom/esigner-codesign@develop
         with:
           # Sign and timestamp code object.
           command: sign
