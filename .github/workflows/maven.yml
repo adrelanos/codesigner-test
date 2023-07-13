@@ -5,7 +5,7 @@ name: Sign Test
 on: [push]
 
 env:
-  FILE_NAME: codesign.ps1
+  FILE_NAME: hello.exe
 
 # Defines a single job named "build-and-sign-jar"
 jobs:
@@ -25,9 +25,13 @@ jobs:
 
       - name: Create Input file for test signing
         shell: bash
+        # run: |
+        #   mkdir -p ${GITHUB_WORKSPACE}/example
+        #   echo 'Write-Output -InputObject "Happy Signing From ESigner.com!"' > ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
         run: |
           mkdir -p ${GITHUB_WORKSPACE}/example
-          echo 'Write-Output -InputObject "Happy Signing From ESigner.com!"' > ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
+          ls -la
+          cp --verbose hello.exe ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
 
       # 5) This is the step where the created JAR (artifact) files will be signed with CodeSignTool.
       - name: Sign Artifact with CodeSignTool
