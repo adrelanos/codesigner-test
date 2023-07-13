@@ -12,20 +12,6 @@ env:
 # Defines a single job named "build-and-sign-jar"
 jobs:
   build-and-sign-jar:
-  build:
-    env:
-        # https://github.com/SSLcom/esigner-codesign/issues/4#issuecomment-1631541528
-        # https://github.com/SSLcom/ci-images/blob/main/.env
-        USERNAME: "esigner_demo"
-        PASSWORD: "esignerDemo#1"
-        CREDENTIAL_ID: "8b072e22-7685-4771-b5c6-48e46614915f"
-        TOTP_SECRET: "RDXYgV9qju+6/7GnMf1vCbKexXVJmUVr+86Wq/8aIGg="
-        ENVIRONMENT_NAME: TEST
-        # https://github.com/SSLcom/ci-images/blob/main/codesign-tool/conf/code_sign_tool_demo.properties
-        CLIENT_ID: qOUeZCCzSqgA93acB3LYq6lBNjgZdiOxQc-KayC3UMw
-        OAUTH2_ENDPOINT: https://oauth-sandbox.ssl.com/oauth2/token
-        CSC_API_ENDPOINT: https://cs-try.ssl.com
-        TSA_URL: http://ts.ssl.com
     runs-on: debian-latest
     name: CodeSigner Test
     steps:
@@ -46,11 +32,6 @@ jobs:
         shell: bash
         run: |
           cp /usr/bin/cat ${GITHUB_WORKSPACE}/packages/${{env.PROJECT_NAME}}.jar
-
-
-
-
-
 
       # 5) This is the step where the created JAR (artifact) files will be signed with CodeSignTool.
       - name: Sign Artifact with CodeSignTool
