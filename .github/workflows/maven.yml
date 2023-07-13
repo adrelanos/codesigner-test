@@ -12,7 +12,7 @@ env:
 # Defines a single job named "build-and-sign-jar"
 jobs:
   build-and-sign-jar:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     name: CodeSigner Test
     steps:
       # 1) Check out the source code so that the workflow can access it.
