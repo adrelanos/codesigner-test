@@ -8,4 +8,4 @@ set -e
 ## https://github.com/SSLcom/esigner-codesign/issues/7
 #ppcx64 hello.pas -ohello.exe
 
-fpc hello.pas -ohello2.exe -TWin64
+fpc hello.pas -ohello.exe -TWin64
