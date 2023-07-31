@@ -8,4 +8,5 @@ set -e
 ## https://github.com/SSLcom/esigner-codesign/issues/7
 #ppcx64 hello.pas -ohello.exe
 
+## On Debian, package fp-units-win-base was required.
 fpc hello.pas -ohello.exe -TWin64
