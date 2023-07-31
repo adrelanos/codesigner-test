@@ -17,3 +17,11 @@ osslsigncode remove-signature -in hello.exe_signed -out hello.exe_removed
 ```
 diff hello.exe hello.exe_removed
 ```
+
+```
+vbindiff hello.exe hello.exe_removed
+```
+
+```
+diffoscope hello.exe hello.exe_removed
+```
