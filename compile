@@ -4,4 +4,8 @@ set -x
 
 set -e
 
-ppcx64 hello.pas -ohello.exe
+## Invalid DOS header.
+## https://github.com/SSLcom/esigner-codesign/issues/7
+#ppcx64 hello.pas -ohello.exe
+
+fpc hello.pas -ohello2.exe -TWin64
