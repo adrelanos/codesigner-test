@@ -5,7 +5,7 @@ name: Sign Test
 on: [push]
 
 env:
-  FILE_NAME: hello2.exe
+  FILE_NAME: hello.exe
 
 # Defines a single job named "build-and-sign-jar"
 jobs:
