@@ -2,6 +2,11 @@
 
 `hello.exe_signed` was created using github actions (CI) and codesigner.
 
+`osslsigncode attach-signature` modifies the PE header by adding the PE checksum.
+That is why `hello.exe_signed` is different from `hello.exe_reattached`.
+Thanks to `pe_header_to_zero.py` it is possible to reset the PE checksum
+back to `0` as it originally is in `hello.exe` and `hello.exe_signed`.
+
 ```
 osslsigncode verify -in hello.exe_signed
 ```
