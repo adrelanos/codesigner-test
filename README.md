@@ -29,3 +29,11 @@ diffoscope hello.exe hello.exe_removed
 ```
 osslsigncode attach-signature -sigin hello.exe_signature -in hello.exe -out hello.exe_reattached
 ```
+
+```
+cmp hello.exe hello.exe_reattached
+```
+
+```
+cmp -l hello.exe hello.exe_reattached
+```
