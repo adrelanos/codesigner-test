@@ -37,3 +37,19 @@ cmp hello.exe hello.exe_reattached
 ```
 cmp -l hello.exe hello.exe_reattached
 ```
+
+```
+sudo apt install pev
+```
+
+```
+readpe hello.exe_signed
+```
+
+```
+./pe_header_to_zero.py
+```
+
+```
+readpe hello.exe_reattached_pe_header_to_zero
+```
