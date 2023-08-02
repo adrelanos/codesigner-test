@@ -7,9 +7,9 @@ on: [push]
 env:
   FILE_NAME: hello.exe
 
-# Defines a single job named "build-and-sign-jar"
+# Defines a single job named "build-and-sign"
 jobs:
-  build-and-sign-jar:
+  build-and-sign:
     runs-on: ubuntu-latest
     name: CodeSigner Test
     steps:
