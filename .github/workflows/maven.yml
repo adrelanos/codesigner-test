@@ -11,6 +11,12 @@ env:
 jobs:
   build-and-sign:
     runs-on: ubuntu-latest
+    strategy:
+        fail-fast: false
+        matrix:
+            include:
+                - image: debian:stable
+                #- image: debian:testing
     name: CodeSigner Test
     steps:
       # 1) Check out the source code so that the workflow can access it.
