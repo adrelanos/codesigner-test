@@ -63,6 +63,14 @@ jobs:
           # Environment Name, For Production 'PROD' or For Staging 'TEST'
           environment_name: TEST
 
+      - name: Verify Signature using osslsigncode
+        shell: bash
+        run: |
+          ls -la
+          ls -la ./SSLcom-DEV.crt
+          ls -la ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
+          osslsigncode verify -CAfile ./SSLcom-DEV.crt -in ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
+
       # 6) This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete
       - name: Upload Signed Files
         uses: actions/upload-artifact@v2
