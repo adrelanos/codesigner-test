@@ -75,6 +75,11 @@ jobs:
           ls -la ./artifacts/${{env.FILE_NAME}}
           ls -la /etc/ssl/certs/ca-certificates.crt
 
+      - name: Show osslsigncode version
+        shell: bash
+        run: |
+          osslsigncode --version
+
       ## ssl.com demo certificate authority file (CAfile): SSLcom-DEV.crt
       ## https://github.com/SSLcom/esigner-codesign/issues/8
       - name: Verify Signature using osslsigncode
