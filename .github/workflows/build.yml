@@ -23,8 +23,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install osslsigncode
-        run: sudo apt-get install --yes osslsigncode
+      - name: Install osslsigncode and ca-certificates
+        run: sudo apt-get install --yes --no-install-recommends osslsigncode ca-certificates
 
       # 3) Create Artifact Directory to store signed and unsigned artifact files
       - name: Create Artifacts Directory
