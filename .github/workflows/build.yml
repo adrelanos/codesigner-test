@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install osslsigncode
-        run: apt-get install --yes osslsigncode
+        run: sudo apt-get install --yes osslsigncode
 
       # 3) Create Artifact Directory to store signed and unsigned artifact files
       - name: Create Artifacts Directory
