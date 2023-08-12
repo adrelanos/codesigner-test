@@ -63,7 +63,7 @@ jobs:
           # Environment Name, For Production 'PROD' or For Staging 'TEST'
           environment_name: TEST
 
-        # 6) This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete
+      # 6) This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete
       - name: Upload Signed Files
         uses: actions/upload-artifact@v2
         with:
