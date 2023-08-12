@@ -27,10 +27,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install osslsigncode and ca-certificates
+      - name: Install Dependencies
         run: |
           apt-get update
-          apt-get install --yes --no-install-recommends osslsigncode ca-certificates
+          apt-get install --yes --no-install-recommends osslsigncode ca-certificates unzip
 
       # 3) Create Artifact Directory to store signed and unsigned artifact files
       - name: Create Artifacts Directory
