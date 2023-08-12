@@ -16,7 +16,7 @@ jobs:
         matrix:
             include:
                 - image: debian:stable
-                #- image: debian:testing
+                - image: debian:testing
 
     container:
         image: ${{ matrix.image }}
