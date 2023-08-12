@@ -74,6 +74,7 @@ jobs:
           ls -la ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
           ls -la ./artifacts/${{env.FILE_NAME}}
           ls -la /etc/ssl/certs/ca-certificates.crt
+          lsb_release --all
 
       - name: Show osslsigncode version
         shell: bash
