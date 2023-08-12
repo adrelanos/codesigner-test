@@ -17,6 +17,10 @@ jobs:
             include:
                 - image: debian:stable
                 #- image: debian:testing
+
+    container:
+        image: ${{ matrix.image }}
+
     name: CodeSigner Test
     steps:
       # 1) Check out the source code so that the workflow can access it.
