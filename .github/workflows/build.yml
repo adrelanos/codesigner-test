@@ -74,6 +74,8 @@ jobs:
           ls -la ${GITHUB_WORKSPACE}/example/${{env.FILE_NAME}}
           ls -la ./artifacts/${{env.FILE_NAME}}
 
+      ## ssl.com demo certificate authority file (CAfile): SSLcom-DEV.crt
+      ## https://github.com/SSLcom/esigner-codesign/issues/8
       - name: Verify Signature using osslsigncode
         shell: bash
         run: |
